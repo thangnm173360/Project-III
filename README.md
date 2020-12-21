@@ -1,6 +1,5 @@
-# Project-III
-Nguyen Minh Thang 20173360
+# mobilenetssd
+A web app for MobileNet SSD detection example hosted at https://mobilenetssd.herokuapp.com/
 
-![](image/sofa.png)
-![](image/chairs.png)
-![](image/table.png)
+<img src="https://github.com/jideilori/jideilori.github.io/blob/master/img/mobilenetsddweb.png" width="780" height="550">
+
