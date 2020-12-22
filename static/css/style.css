@@ -624,7 +624,7 @@ s
 .box-img:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-	background: #007dea;
+	background: #d0ba9f;
 }
 
 .food {
@@ -953,6 +953,7 @@ s
 	background: #fff;
 	padding: 12px;
 	margin: 0px 15px;
+	border-radius: 20px;
 }
 
 .prod-i img {

@@ -57,7 +57,7 @@ def detect_object(path, filename):
     model ="ssd/MobileNetSSD_deploy.caffemodel"
     net = cv2.dnn.readNetFromCaffe(prototxt, model)
     image = cv2.imread(path)
-    image = cv2.resize(image,(480,360))
+#     image = cv2.resize(image,(480,360))
     (h, w) = image.shape[:2]
     blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
     net.setInput(blob)
