@@ -697,6 +697,7 @@ s
 
 .panel-default {
 	border-color: transparent;
+	border-radius: 20px;
 }
 
 /*-- Products Exciting --*/
@@ -704,6 +705,7 @@ s
 .products_exciting_box {
 	background: #f4f9fd;
 	padding: 20px 0px;
+	border-radius: 20 px;
 }
 
 .exciting_box .icon-small {
@@ -713,6 +715,7 @@ s
 
 .exciting_box {
 	position: relative;
+	border-radius: 20 px;
 }
 
 .exciting_box h4 {
@@ -953,11 +956,11 @@ s
 	background: #fff;
 	padding: 12px;
 	margin: 0px 15px;
-	border-radius: 20px;
 }
 
 .prod-i img {
 	width: 100%;
+	border-radius: 15px;
 }
 
 .left-ti {
@@ -2368,6 +2371,7 @@ html .ui-button.ui-state-disabled:active {
 	background: #f4f9fd;
 	border: none;
 	box-shadow: none;
+	border-radius: 15px;
 }
 
 .left-list-f .panel-group .panel+.panel {

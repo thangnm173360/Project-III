@@ -221,6 +221,36 @@
             </div>
          </div>
       </div>
+
+      <div class="container">
+         <div class="starter-template">
+            <br>
+            <h1>Validate Products</h1>
+            <h2>Upload an image and see what objects are detected</h2>
+         </div>
+      </div>
+      <br>
+      <div class="container">
+         <div class="w3-row w3-container">
+            <div class="w3-col s3 w3-center">
+               <form method=post enctype=multipart/form-data>
+            </div>
+            <div class="w3-col s3 w3-left">
+               <input type=file name=file onchange="loadFile(event)" class="btn btn-primary">
+            </div>
+            <div class="w3-col s3 w3-center">
+               <input type=submit value=Upload class="ml-12 btn btn-primary">
+            </div>
+         </form>
+         <img id="output" alt="" width="40%" height="40%" />
+      </div>
+      {% if data %}
+      <div class="container">
+         <img src="{{ data.processed_img }}" alt="" width="480px" height="100%">
+         <img src="{{ data.uploaded_img }}" alt="" width="480px" height="100%">
+      </div>
+      {% endif %}
+      <br>
       <div class="products_exciting_box">
          <div class="container">
             <div class="row">
@@ -348,8 +378,8 @@
                               <a href="#">$94</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Like</a>
                            </div>
                         </div>
                      </div>
@@ -368,8 +398,8 @@
                               <a href="#">$129</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save   </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
                            </div>
                         </div>
                      </div>
@@ -388,8 +418,8 @@
                               <a href="#">$820</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save   </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
                            </div>
                         </div>
                      </div>
@@ -408,8 +438,8 @@
                               <a href="#">$1720</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save   </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
                            </div>
                         </div>
                      </div>
@@ -428,8 +458,8 @@
                               <a href="#">$980</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save   </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
                            </div>
                         </div>
                      </div>
@@ -448,8 +478,8 @@
                               <a href="#">$520</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save   </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
                            </div>
                         </div>
                      </div>
@@ -468,8 +498,8 @@
                               <a href="#">$980</a>
                            </div>
                            <div class="dit-btn clearfix">
-                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist </a>
-                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                              <a class="wis" href="#"><i class="fa fa-star" aria-hidden="true"></i> Save   </a>
+                              <a class="thi" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a>
                            </div>
                         </div>
                      </div>
@@ -478,34 +508,6 @@
             </div>
          </div>
          <br>
-         <div class="container">
-            <div class="starter-template">
-               <br>
-               <h1>Validate Products</h1>
-               <h2>Upload an image and see what objects are detected</h2>
-            </div>
-         </div>
-         <br>
-         <div class="container">
-            <div class="w3-row w3-container">
-               <div class="w3-col s3 w3-center">
-                  <form method=post enctype=multipart/form-data>
-               </div>
-               <div class="w3-col s3 w3-left">
-                  <input type=file name=file onchange="loadFile(event)">
-               </div>
-               <div class="w3-col s3 w3-center">
-                  <input type=submit value=Upload class="ml-12 btn btn-primary">
-               </div>
-            </form>
-            <img id="output" alt="" width="40%" height="40%" />
-         </div>
-         {% if data %}
-         <div class="container">
-            <img src="{{ data.processed_img }}" alt="" width="480px" height="100%">
-            <img src="{{ data.uploaded_img }}" alt="" width="480px" height="100%">
-         </div>
-         {% endif %}
       </div>
       <br>
       <footer>
